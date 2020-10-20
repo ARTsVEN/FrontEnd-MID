@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <title>StudentListApp | ArthurL</title>
+    <style>
+      
+      .navbar{
+        background-color: blueviolet ;
+      }
+      .asd{
+        background-color: blueviolet;
+        color: white;
+      }
+ 
+    </style>
+
+  </head>
+  <body>
+    
+    
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+        <a class="navbar-brand" href="#">Student Management MiniApp</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            
+            <li class="nav-item">
+              <a class="nav-link" href="http://127.0.0.1:5500/1/index2.html#">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://127.0.0.1:5500/1/index3.html#">About</a>
+              </li>
+            
+          </ul>
+        </div>
+      </nav>
+      <div>
+      <h1 class="container-sm mt-1">Student Management</h1>
+      <h1 class="container-sm mt-1">MiniApp</h1>
+      <hr class="container-sm">
+      </div>
+      <div class="container-sm mt-4">
+        <div class="row">
+            <div class="col-8">
+              <h4>Add Student</h4>
+                <button type="button" class="asd btn " id="show-hide-students">Show Form Add Students</button>
+                <p>
+                    <form id="form-input-student" style="display:none">
+                        <div class="form-group">
+                          <label for="exampleInputEmail1">Student ID (NIM)</label>
+                          <input type="text" class="form-control" id="NIM">
+                        </div>
+                        <div class="form-group">
+                          <label for="exampleInputPassword1">Full Name</label>
+                          <input type="text" class="form-control" id="nama">
+                        </div>
+                        
+                        <div class="form-group">
+                          <p class="mb-1">Gender</p>
+                          <div class="form-check">
+                              <input class="form-check-input" type="radio" name="gender" value="Male" checked>
+                              <label class="form-check-label" for="male">
+                                  Male
+                        </label>
+                            </div>
+                            <div class="form-check">
+                              <input class="form-check-input" type="radio" name="gender" value="Female">
+                              <label class="form-check-label" for="female">
+                                  Female
+                              </label>
+                            </div>
+                          </div>
+                        
+
+                        <div class="allign-items-center">
+                          <label class="mt-3"for="validationCustom03">Faculty</label>
+                          <select class="custom-select" id="facultyData" required>
+                            <option selected="">-- SELECT FACULTY --</option>
+                            <option>Fakultas Ilmu Komputer</option>
+                            <option>Pascasarjana</option>
+                            <option>Fakultas Filsafat</option>
+                            <option>Fakultas Keguruan dan Ilmu Pendidikan</option>
+                            <option>Fakultas Ekonomi Dan Bisnis</option>
+                            <option>Fakultas Pertanian</option>
+                            <option>Fakultas Keperawatan</option>
+                          </select>
+                        </div>
+
+                          <div class="allign-items-center">
+                            <label class="mt-3"for="validationCustom04">Program Of Study</label>
+                            <select class="custom-select" id="pStudi_data" required>
+                              <option selected="">-- SELECT PROGRAM OF STUDY --</option>
+                              
+                            </select>
+                          </div>
+                        <button type="submit" class="mt-3 btn asd btn-block "id="addStudent">Add Student</button>
+
+                      </form>
+
+                </p>
+            </div>
+            
+            <div class="col-4">
+                <h4>Filter Students By</h4>
+                <form id="form-filter-student">
+                  <div class="allign-items-center">
+                    <label class="mt-3"for="validationCustom03">Faculty</label>
+                    <select class="custom-select" id="facultyFilter" required>
+                      <option selected="">-- SELECT FACULTY --</option>
+                      <option>Fakultas Ilmu Komputer</option>
+                      <option>Pascasarjana</option>
+                      <option>Fakultas Filsafat</option>
+                      <option>Fakultas Keguruan dan Ilmu Pendidikan</option>
+                      <option>Fakultas Ekonomi Dan Bisnis</option>
+                      <option>Fakultas Pertanian</option>
+                      <option>Fakultas Keperawatan</option>
+                    </select>
+                  </div>
+                  <button type="submit" class="mt-3 btn asd btn-block "id="showFaculty">Show Student</button>
+                  <div class="allign-items-center">
+                     <label class="mt-3"for="">Program Of Study</label>
+                     <select class="custom-select" id="psfilter" required>
+                       <option selected="">-- SELECT PROGRAM OF STUDY --</option>
+                       <option>Informatika</option>
+                       <option>Sistem Informasi</option>
+                       <option>Magister Management</option>
+                       <option>Magister Teologi</option>
+                       <option>Ilmu Filsafat</option>
+                       <option>Pendidikan Agama</option>
+                       <option>Pendidikan Bahasa Inggris</option>
+                       <option>Pendidikan Ekonomi</option>
+                       <option>Pendidikan Luar Sekolah</option>
+                       <option>Akuntansi</option>
+                       <option>Management</option>
+                       <option>Agroteknologi</option>
+                       <option>Keperawatan</option>
+                       <option>Profesi Ners</option>
+                       
+                     </select>
+                  </div>
+                  <button type="submit" class="mt-3 btn asd btn-block "id="showPStudi">Show Student</button>
+                </form>
+            </div>
+          </div>
+      </div>
+      <div class="container-sm mt-5">
+        <div class="container-sm mt-5 text-center">
+          <hr>
+          <h2 class="mt-2">Our Students</h2>
+          <div class="form-group">
+            
+            <input placeholder="Search by Name"type="text" class="form-control" id="search">
+            
+          </div>
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Student ID (NIM)</th>
+                <th scope="col">First Name</th>
+                <th scope="col">Gender</th>
+                <th scope="col">Faculty</th>
+                <th scope="col">Program of Studi</th>
+                <th scope="col">Action</th>
+              </tr>
+            </thead>
+            <tbody id="studentData">
+              
+            </tbody>
+          </table>
+          
+         
+
+
+      </div>
+      
+      
+
+<script src="../2/aa.js"></script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  </body>
+</html>
